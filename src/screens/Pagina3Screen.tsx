@@ -12,7 +12,9 @@ const Pagina3Screen = ({navigation}:Props) => {
     <View
         style={ styles.globalMargin }
     >
-        <Text>
+        <Text
+            style={ styles.title }
+        >
             Pagina 3
         </Text>
 
