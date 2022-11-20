@@ -25,5 +25,9 @@ export const styles = StyleSheet.create({
     btnText: {
         fontSize: 20,
         color: 'white'
+    },
+    avatar: {
+        width: 150,
+        height: 150
     }
 })

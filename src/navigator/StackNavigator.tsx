@@ -16,7 +16,7 @@ export type RootStackParams = {
 
 const Stack = createStackNavigator();
 
-const StackNavigatior = () => {
+const StackNavigator = () => {
   return (
     <Stack.Navigator
       // initialRouteName='Pagina1Screen'
@@ -37,4 +37,4 @@ const StackNavigatior = () => {
   );
 }
 
-export default StackNavigatior
+export default StackNavigator
