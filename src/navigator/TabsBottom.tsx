@@ -6,6 +6,8 @@ import Tab2Screen from '../screens/Tab2Screen';
 import Tab3Screen from '../screens/Tab3Screen';
 import StackNavigator from './StackNavigator';
 import { Text } from 'react-native';
+import TopTabNavigator from './TopTabNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,22 +21,22 @@ const TabsBottom = () => {
 
                 switch (route.name) {
                     case 'Tab1Screen':
-                        iconName = 'T1'
+                        iconName = 'business-outline'
                         break;
                     
-                    case 'Tab2Screen':
-                        iconName = 'T2'
+                    case 'TopTabNavigator':
+                        iconName = 'call-outline'
                         break;
                     
                     case 'StackNavigator':
-                        iconName = 'St'
+                        iconName = 'body-outline'
                         break;
                 
                     default:
                         break;
                 }
                 
-                return (<Text style={{ color }}> {iconName}</Text>)
+                return (<Text> <Icon name={iconName} size={20} color="#900"></Icon></Text>)
             
             },
             tabBarActiveTintColor: 'red',
@@ -44,11 +46,8 @@ const TabsBottom = () => {
             },
         })}
     >
-      {/* <Tab.Screen name="Tab1Screen"     
-        options={{ title: 'Tab1', tabBarIcon: (props)=> <Text style={ {color: props.color } }>T1</Text>}} 
-        component={Tab1Screen} /> */}
       <Tab.Screen name="Tab1Screen"         options={{ title: 'Tab1'}} component={Tab1Screen} />
-      <Tab.Screen name="Tab2Screen"         options={{ title: 'Tab2'}} component={Tab2Screen} />
+      <Tab.Screen name="TopTabNavigator"    options={{ title: 'Tab2'}} component={TopTabNavigator} />
       <Tab.Screen name='StackNavigator'     options={{ title: 'Stack'}} component={StackNavigator}/>
     </Tab.Navigator>
   );
